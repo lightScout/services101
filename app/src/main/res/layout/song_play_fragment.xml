@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    >
+
+
+
+    <ImageView
+        android:id="@+id/song_cover_imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/song_info_textView"
+        android:layout_margin="16dp"
+        tools:src="@tools:sample/backgrounds/scenic"
+        android:scaleType="fitCenter"
+        />
+
+    <ProgressBar
+        android:id="@+id/main_progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/play_pause_imageView"
+        android:layout_margin="16dp"
+        android:progress="29"
+        android:progressTint="#009FFF"
+        />
+
+    <ImageView
+        android:id="@+id/play_pause_imageView"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toEndOf="@id/previous_imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/next_imageView"
+        android:src="@drawable/ic_pause"
+        android:layout_margin="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/previous_imageView"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_previous"
+        app:layout_constraintBottom_toBottomOf="@+id/play_pause_imageView"
+        app:layout_constraintEnd_toStartOf="@id/play_pause_imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/play_pause_imageView" />
+
+    <TextView
+        android:id="@+id/song_info_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_progressBar"
+        android:layout_margin="16dp"
+        tools:text="Gotta use my time"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="22sp"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/next_imageView"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_next"
+        app:layout_constraintBottom_toBottomOf="@+id/play_pause_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/play_pause_imageView"
+        app:layout_constraintTop_toTopOf="@+id/play_pause_imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
